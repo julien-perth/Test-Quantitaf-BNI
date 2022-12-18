@@ -25,7 +25,7 @@ $ python3 main.py
 
 ## Remarques
 
-Prenez note des configurations indiquées dans le fichier [config.py](./utilities/config.py) au besoin de changer ..
+Prenez note des configurations indiquées dans le fichier [config.py](./utilities/config.py) au besoin de changer l'hypothèse de ratio des frais.
 
 
 ## Fonctionnalités réalisées
