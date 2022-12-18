@@ -5,7 +5,6 @@ from daily_return import f_calculated_aggrageted_returns
 from index_series import f_construct_index_series
 from data_formating import create_final_df
 
-
 start = datetime.now()
 
 weigths = {}
@@ -30,17 +29,17 @@ for i in range(1,len(port_index_series)):
 
 
 to_export = [port_daily_returns,port_index_series,performance_series]
-
-
 final_dfs ={}
 for i in range(len(to_export)):
     if i != len(to_export)-1:
         final_dfs[i]=create_final_df(to_export[i], config.used_sheets)
     else:
         final_dfs[i]=create_final_df(to_export[i], config.name)
+    if i ==0:
+        final_dfs[i].set_axis(["Date","gross_returns", 'fess', 'total_returns','Portfolio'], axis='columns', inplace=True)
 
     final_dfs[i].to_csv("./"+config.file_name[i])
 
-end= datetime.now()-start
+end = datetime.now()-start
 
 
