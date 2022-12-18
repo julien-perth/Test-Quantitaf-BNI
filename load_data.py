@@ -1,17 +1,18 @@
 import pandas as pd
 import datetime
 
-
 def f_load_data(path,sheet_name,columns_match="None",col_to_keep="None"):
 
     df = pd.read_excel(path, sheet_name=sheet_name)
+
     df.columns = f_define_header(df)
-    id_to_start = f_find_line_to_index(df)+1
+    id_to_start = f_find_line_to_index(df)+1 #permet de trouver la première ligne qui commence par un date et de mettre la ligne d'avant en index de colonnes
     df = df[id_to_start:]
 
+    ## On flitre les colonnes nécessaires si l'utilisateur spécifie des colonnes à conserver
     if type(col_to_keep) != str or col_to_keep != "None":
         final_cols_to_keep = []
-        final_cols_to_keep.append("Date")
+        final_cols_to_keep.append("Date") ## la première colonne sera toujours la date
         for i in range(len(col_to_keep)):
             for j in range(len(columns_match[0])):
                 if col_to_keep[i] == columns_match[0][j]:
@@ -21,7 +22,7 @@ def f_load_data(path,sheet_name,columns_match="None",col_to_keep="None"):
 
     df.reset_index(drop=True, inplace=True)
 
-    nan_data = f_chek_nan(df)
+    nan_data = f_chek_nan(df) ## retourne la localisation des données avec des nan
     if len(nan_data[1]) > 0:
         df = f_fill_nan(df, nan_data[1], nan_data[0])
 
