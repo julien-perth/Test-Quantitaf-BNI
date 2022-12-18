@@ -6,7 +6,7 @@ PERTH, Julien
 
 ## Plateformes supportées 
 
-Ce prototype a été créé et testé sous la plateforme `Windows11` en utilisant l'IDE `pycharm`
+Ce prototype a été créé et testé sous la plateforme `Windows11` en utilisant l'IDE `PyCharm`
 
 ## Installation
 
