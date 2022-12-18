@@ -36,7 +36,7 @@ for i in range(len(to_export)):
     else:
         final_dfs[i]=create_final_df(to_export[i], config.name)
     if i ==0:
-        final_dfs[i].set_axis(["Date","gross_returns", 'fess', 'total_returns','Portfolio'], axis='columns', inplace=True)
+        final_dfs[i].set_axis(["Date","gross_returns", 'fees', 'total_returns','Portfolio'], axis='columns', inplace=True)
 
     final_dfs[i].to_csv("./"+config.file_name[i])
 
