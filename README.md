@@ -26,6 +26,6 @@ $ python3 main.py
 ````
 
 ## Fonctionnalités réalisées
--
--
--
+- Série de rendement quotidienne du portefeuille Benchmark
+- Série de rendement quotidienne du portefeuille SAA
+- Série de rendement quotidienne du portefeuille Manager
