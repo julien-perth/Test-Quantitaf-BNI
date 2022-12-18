@@ -28,8 +28,3 @@ $ python3 main.py
 Prenez note des configurations indiquées dans le fichier [config.py](./utilities/config.py) au besoin de changer l'hypothèse de ratio des frais.
 
 
-## Fonctionnalités réalisées
-
-- Série de rendement quotidienne du portefeuille Benchmark
-- Série de rendement quotidienne du portefeuille SAA
-- Série de rendement quotidienne du portefeuille Manager
