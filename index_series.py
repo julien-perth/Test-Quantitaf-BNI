@@ -36,4 +36,4 @@ def f_construct_index_series(lower_date,upper_date,df_weigths,df_returns,adjustm
 
         index = np.hstack((index,f_calc_new_sum_of_weigth(weigth_adj_return[i])*base/total_weigth[i]))
 
-    return index
+    return arrs_date,index
