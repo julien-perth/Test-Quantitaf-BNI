@@ -41,7 +41,7 @@ final_dfs[len(dfs)].reset_index(drop=True, inplace=True)
 final_dfs[[len(dfs)].set_axis(["Date", "Gross Returns", "Fees", "Total Returns", "Portfolio"], axis='columns', inplace=True)
 
 ### Export en CSV
-order = [3, 1, 2]
+order = [2, 0, 1]
 for i in range(len(final_dfs)):
     final_dfs[order[i]].to_csv("./"+config.file_name[i])
 
