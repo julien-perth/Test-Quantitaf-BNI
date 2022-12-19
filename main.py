@@ -38,10 +38,12 @@ for i in range(len(dfs)):
 
 final_dfs[len(dfs)] = create_final_df_tranpose(port_daily_returns, config.used_sheets)
 final_dfs[len(dfs)].reset_index(drop=True, inplace=True)
+dict_portfolio_index[i].set_axis(["Date", "Gross Returns", "Fees", "Total Returns", "Portfolio"], axis='columns', inplace=True)
 
 ### Export en CSV
+order = [3, 1, 2]
 for i in range(len(final_dfs)):
-    final_dfs[i].to_csv("./"+config.file_name[i])
+    final_dfs[order[i]].to_csv("./"+config.file_name[i])
 
 end = datetime.now()-start
 
