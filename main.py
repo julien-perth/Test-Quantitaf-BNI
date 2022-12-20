@@ -38,7 +38,7 @@ for i in range(len(dfs)):
 
 final_dfs[len(dfs)] = create_final_df_tranpose(port_daily_returns, config.used_sheets)
 final_dfs[len(dfs)].reset_index(drop=True, inplace=True)
-final_dfs[[len(dfs)].set_axis(["Date", "Gross Returns", "Fees", "Total Returns", "Portfolio"], axis='columns', inplace=True)
+final_dfs[len(dfs)].set_axis(["Date", "Gross Returns", "Fees", "Total Returns", "Portfolio"], axis='columns', inplace=True)
 
 ### Export en CSV
 order = [2, 0, 1]
